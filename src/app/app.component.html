@@ -1,4 +1,36 @@
+<!--<md-card class="todoapp">
+  <md-toolbar color="primary">
+    Material Design
+    <button md-fab class="fab-add" (click)="todoDialog()">
+      <md-icon>add</md-icon>
+    </button>
+  </md-toolbar>
 
+  <md-card-content *ngIf="todoList.length">
+    <md-list>
+      <form>
+        <md-list-item *ngFor="let todo of todoList; let index=index" class="list-item">
+
+          <md-checkbox color="primary" type="checkbox" [name]="'item'+index" >
+            <span [class.completed]="todo.completed">{{todo.title}}</span>
+          </md-checkbox>
+
+          <span>
+           <button md-mini-fab (click)="remove(index)" color="primary">
+             <md-icon>delete_forever</md-icon>
+           </button>
+
+           <button md-mini-fab (click)="todoDialog(todo)" color="primary"
+                   [disabled]="todo.completed">
+             <md-icon>mode_edit</md-icon>
+           </button>
+         </span>
+
+        </md-list-item>
+      </form>
+    </md-list>
+  </md-card-content>
+</md-card>-->
 
 <app-dialog
   [title]="'Dialog Prompt'"
@@ -6,7 +38,6 @@
   [placeholder] = "'Enter text here'"
   [okText] = "'Yes'"
   [cancelText]="'No'"
-  [value]="'Starting Text'"
   [showPrompt]="true"
   (valueEmitted)="log($event)"
 ></app-dialog>
