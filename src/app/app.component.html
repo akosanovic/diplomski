@@ -1,4 +1,6 @@
-<!--<md-card class="todoapp">
+<md-card 
+    *ngIf = 'closeDialog'
+    class="todoapp">
   <md-toolbar color="primary">
     Material Design
     <button md-fab class="fab-add" (click)="todoDialog()">
@@ -30,14 +32,15 @@
       </form>
     </md-list>
   </md-card-content>
-</md-card>-->
+</md-card>
 
 <app-dialog
-  [title]="'Dialog Prompt'"
-  [template] = "'Material Design based Component'"
-  [placeholder] = "'Enter text here'"
-  [okText] = "'Yes'"
-  [cancelText]="'No'"
-  [showPrompt]="true"
-  (valueEmitted)="log($event)"
+    *ngIf = "!closeDialog"
+    [title]="'Dialog Prompt'"
+    [template] = "'Material Design based Component'"
+    [placeholder] = "'Enter text here'"
+    [okText] = "'Yes'"
+    [cancelText]="'No'"
+    [showPrompt]="true"
+    (valueEmitted)="log($event)"
 ></app-dialog>
