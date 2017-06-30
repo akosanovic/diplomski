@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+/*global styles for Material Design*/
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.modalDialog {
+  max-width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 25px;
+  background: #fff;
+}
+
+.full-width { width: 100%; }
+
+.center { text-align: center; }
+
+.list-item {
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+}
+
+.list-item button .material-icons {
+  font-size: 16px;
+  padding: 0;
+}
+
+.list-item:hover button {
+  display: block;
+}
+
+.list-item button {
+  display: none;
+  float: right;
+  margin: -4px 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.list-item /deep/ .md-checkbox-label {
+  margin: 10px 0;
+}
+
+.completed {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+
+.fab-add {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}

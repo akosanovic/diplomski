@@ -1,0 +1,36 @@
+<div class="overlay">
+  <md-card class="modalDialog">
+    <md-toolbar color="primary">
+      {{title}}
+    </md-toolbar>
+    <md-card-content>
+      <br>
+      {{template}}
+    </md-card-content>
+
+
+    <md-input-container class="full-width">
+        <input mdInput [placeholder]="placeholder"
+                      (keyup.enter)="emitValue(value)"
+                      (keyup.escape)="emitValue(null)"/>
+    </md-input-container>
+
+    
+
+    
+  
+  </md-card>
+</div>
+
+<md-input-container class="full-width">
+    <input mdInput [placeholder]="placeholder"
+                  (keyup.enter)="emitValue(value)"
+                  (keyup.escape)="emitValue(null)"/>
+</md-input-container>
+
+<button md-button (click) = 'emitValue(null)' color='primary'>
+  {{cancelText}}
+</button>
+<button md-raised-button (click)="emitValue(value)" color="primary">
+  {{okText}}
+</button>
